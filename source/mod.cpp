@@ -5,6 +5,7 @@
 #include <spm/seqdrv.h>
 #include <spm/seqdef.h>
 #include <wii/os/OSError.h>
+#include <wii/gx.h>
 
 namespace mod {
 
@@ -16,7 +17,7 @@ namespace mod {
 static spm::seqdef::SeqFunc *seq_titleMainReal;
 static void seq_titleMainOverride(spm::seqdrv::SeqWork *wp)
 {
-    wii::RGBA green {0, 255, 0, 255};
+    wii::gx::GXColor green = {0, 255, 0, 255};
     f32 scale = 0.8f;
     const char * msg = "SPM Rel Loader";
     spm::fontmgr::FontDrawStart();
@@ -41,7 +42,7 @@ static void titleScreenCustomTextPatch()
 
 void main()
 {
-    wii::os::OSError::OSReport("SPM Rel Loader: the mod has ran!\n");
+    wii::os::OSReport("SPM Rel Loader: the mod has ran!\n");
 
     titleScreenCustomTextPatch();
 }
