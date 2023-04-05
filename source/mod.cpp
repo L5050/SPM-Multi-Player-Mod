@@ -7,9 +7,6 @@
 #include <wii/os/OSError.h>
 #include <wii/gx.h>
 #include <iostream>
-#include <boost/asio.hpp>
-#include <boost/asio/ssl.hpp>
-#include <boost/beast.hpp>
 
 namespace mod {
 
