@@ -6,12 +6,16 @@
 #include <spm/seqdef.h>
 #include <wii/os/OSError.h>
 #include <wii/gx.h>
+#include <iostream>
+#include <boost/asio.hpp>
+#include <boost/asio/ssl.hpp>
+#include <boost/beast.hpp>
 
 namespace mod {
 
 /*
     Title Screen Custom Text
-    Prints "SPM Rel Loader" at the top of the title screen
+    Prints "SPM Multiplayer Mod" at the top of the title screen
 */
 
 static spm::seqdef::SeqFunc *seq_titleMainReal;
@@ -19,7 +23,7 @@ static void seq_titleMainOverride(spm::seqdrv::SeqWork *wp)
 {
     wii::gx::GXColor green = {0, 255, 0, 255};
     f32 scale = 0.8f;
-    const char * msg = "SPM Rel Loader";
+    const char * msg = "SPM Multiplayer Mod";
     spm::fontmgr::FontDrawStart();
     spm::fontmgr::FontDrawEdge();
     spm::fontmgr::FontDrawColor(&green);
