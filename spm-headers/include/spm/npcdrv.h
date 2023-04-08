@@ -166,7 +166,7 @@ typedef struct _NPCEntry
 /* 0x4EC */ u32 maxHp; // copied from spawning NPCTribe, 1 for NPCs not spawned by tribe
 /* 0x4F0 */ u32 hp; // copied from spawning NPCTribe, 1 for NPCs not spawned by tribe
 /* 0x4F4 */ u8 unknown_0x4f4[0x508 - 0x4f4];
-/* 0x508 */ u8 axisMovementUnit;
+/* 0x508 */ u32 axisMovementUnit;
 /* 0x4F4 */ u8 unknown_0x50c[0x510 - 0x50c];
 /* 0x510 */ s32 unitWork[16];
 /* 0x550 */ u8 unknown_0x550[0x574 - 0x550];
